@@ -1,22 +1,47 @@
+# Java / Maven (Spring Boot)
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
 
-### Environment & Secrets ###
+# Python (AI Service)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+reports/
+**/reports/
+*.pdf
+*.docx
+
+# Frontend / Node
+node_modules/
+dist/
+.next/
+out/
+
+# Environment & Secrets (All layers)
 .env
 .env.*
 *.env
 !.env.example
 
-### Logs & Temp ###
+# Logs & Temp
 *.log
 logs/
 *.tmp
 *.bak
 
-### OS Generated ###
+# OS Generated
 .DS_Store
 .DS_Store?
 ._*
@@ -25,7 +50,7 @@ logs/
 ehthumbs.db
 Thumbs.db
 
-### STS ###
+# IDEs
 .apt_generated
 .classpath
 .factorypath
@@ -33,23 +58,8 @@ Thumbs.db
 .settings
 .springBeans
 .sts4-cache
-
-### IntelliJ IDEA ###
 .idea/
 *.iws
 *.iml
 *.ipr
-out/
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
 .vscode/
