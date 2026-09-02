@@ -24,4 +24,4 @@ FastAPI service that extracts accident details from news URLs, orchestrates back
    ```bash
    python ReportService.py
    ```
-   Service runs on `http://localhost:8000`. Interactive API documentation: `http://localhost:8000/docs`.
+   Service runs on `http://localhost:8082`. Interactive API documentation: `http://localhost:8082/docs`.

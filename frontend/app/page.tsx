@@ -20,7 +20,7 @@ export default function Home() {
     setIsLoading(true);
 
     try {
-      const response = await fetch("http://localhost:8000/api/haber-analiz", {
+      const response = await fetch("http://localhost:8082/api/haber-analiz", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

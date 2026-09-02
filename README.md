@@ -51,7 +51,7 @@ UAB-AIGeneratedReport/
 | Service | Port | Tech Stack | Responsibilities |
 | :--- | :---: | :--- | :--- |
 | **Frontend** | `3000` | Next.js 16, React 19, TailwindCSS, Shadcn UI | User interface for URL submission, plate/date verification table, and report download management. |
-| **AI Orchestrator** | `8000` | Python 3.10+, FastAPI, WeasyPrint, python-docx | Web scraping, LLM prompt orchestration, business logic, and formal PDF/Word document generation. |
+| **AI Orchestrator** | `8082` | Python 3.10+, FastAPI, WeasyPrint, python-docx | Web scraping, LLM prompt orchestration, business logic, and formal PDF/Word document generation. |
 | **Accident Report Service** | `8080` | Java 25, Spring Boot 4, PostgreSQL, JDBC | Queries vehicle ownership, inspection dates, seat/traffic insurance status, and U-ETDS trip/passenger manifests. |
 | **Location Service** | `8081` | Java 25, Spring Boot 4, PostgreSQL, JDBC | Queries the vehicle's last transmitted GPS/ATS tracking timestamp. |
 
@@ -74,6 +74,7 @@ The generated documents strictly comply with Republic of Türkiye official admin
 - **Python 3.10+**
 - **Node.js 20+** & npm
 - **PostgreSQL Database** access
+- **LLM Server** (e.g. vLLM / Ollama running on `port: 8000`)
 
 ---
 
@@ -106,7 +107,7 @@ source venv/bin/activate    # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 python ReportService.py
 ```
-> The AI service runs on `http://localhost:8000`. API documentation is available at `http://localhost:8000/docs`.
+> The AI service runs on `http://localhost:8082`. API documentation is available at `http://localhost:8082/docs`.
 
 ---
 

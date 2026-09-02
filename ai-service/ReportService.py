@@ -582,8 +582,8 @@ def create_reports(request_data: RaporRequest):
             generate_formal_report_docx(docx_path, current_plate, news_date2, final_docx_text, image_path)
 
             generated_files.append({
-                "pdfUrl": f"http://localhost:8000/reports/{pdf_filename}",
-                "docxUrl": f"http://localhost:8000/reports/{docx_filename}",
+                "pdfUrl": f"http://localhost:8082/reports/{pdf_filename}",
+                "docxUrl": f"http://localhost:8082/reports/{docx_filename}",
                 "fileName": f"{licence_plate_formatted}_KazaRaporu"
             })
 
@@ -597,4 +597,4 @@ def create_reports(request_data: RaporRequest):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8082)

@@ -113,7 +113,7 @@ export default function DetailsPage() {
                 }))
             };
 
-            const response = await fetch("http://localhost:8000/api/rapor-olustur", {
+            const response = await fetch("http://localhost:8082/api/rapor-olustur", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
