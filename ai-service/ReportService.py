@@ -31,10 +31,10 @@ app.add_middleware(
 os.makedirs("reports", exist_ok=True)
 app.mount("/reports", StaticFiles(directory="reports"), name="reports")
 
-URL = "http://localhost:8000/v1/chat/completions"
-MODEL_NAME = "qwen3.6-27b-nvfp4-dflash10"
-BASE_URL = "http://localhost:8080/api/accident"
-BASE_URL2 = "http://localhost:8081/api/accident"
+URL = "http://10.118.3.12:30000/v1/chat/completions"
+MODEL_NAME = "qwen3.8-27b"
+BASE_URL = "http://10.118.3.12:8080/api/accident"
+BASE_URL2 = "http://10.118.3.12:8081/api/accident"
 
 app_data = {
     "bus_license_plates": [],
