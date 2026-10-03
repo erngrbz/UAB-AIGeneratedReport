@@ -17,17 +17,17 @@ This platform automates the entire workflow into a seamless 4-step pipeline powe
 ```mermaid
 flowchart TD
     A["📰 1. News Submission"] -->|Paste news article URL| B["🤖 2. AI News Analysis"]
-    B -->|Extracts plates, date & casualty info| C["✍️ 3. User Verification & Edit"]
-    C -->|Confirmed vehicle data| D["⚡ 4. Parallel Database Query"]
+    B -->|Extracts plates, date etc.| C["✍️ 3. User Verification"]
+    C -->|Confirmed vehicle data| D["⚡ 4. Database Query"]
     
     subgraph Microservices ["Microservices Database Layer"]
         D -->|Query inspection, insurance & U-ETDS trips| E["Accident Report Service :8080"]
-        D -->|Query latest GPS/ATS location time| F["Location Service :8081"]
+        D -->|Query latest location time| F["Location Service :8081"]
     end
 
     E --> G["📝 5. LLM Report Formatting"]
     F --> G
-    G -->|Applies official Ministry template| H["📄 6. PDF & DOCX Generation"]
+    G -->|Official Ministry template| H["📄 6. PDF & DOCX Reports"]
     H -->|Downloadable reports| I["✅ 7. User Download"]
 ```
 
